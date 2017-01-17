@@ -1,0 +1,474 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5BA85D4C48B1B6E077DA72CC /* Pods_Messanger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D583274432D08DD881406F45 /* Pods_Messanger.framework */; };
+		8443CAED1E2BA18E001924D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443CAEC1E2BA18E001924D5 /* AppDelegate.swift */; };
+		8443CAF21E2BA18E001924D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8443CAF01E2BA18E001924D5 /* Main.storyboard */; };
+		8443CAF51E2BA18E001924D5 /* Messanger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8443CAF31E2BA18E001924D5 /* Messanger.xcdatamodeld */; };
+		8443CAF71E2BA18E001924D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8443CAF61E2BA18E001924D5 /* Assets.xcassets */; };
+		8443CAFA1E2BA18E001924D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8443CAF81E2BA18E001924D5 /* LaunchScreen.storyboard */; };
+		8443CB061E2BA552001924D5 /* VKCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443CB051E2BA552001924D5 /* VKCoreDataManager.swift */; };
+		8443CB0D1E2BAE1B001924D5 /* VKMCurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443CB0C1E2BAE1B001924D5 /* VKMCurrentUser.swift */; };
+		8443CB0F1E2BAF1B001924D5 /* VKMCurrentUserFabric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443CB0E1E2BAF1B001924D5 /* VKMCurrentUserFabric.swift */; };
+		8443CB121E2BB324001924D5 /* VKMDialogsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443CB111E2BB324001924D5 /* VKMDialogsListViewController.swift */; };
+		89055C281E2BC38F0095B300 /* ACAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89055C271E2BC38F0095B300 /* ACAuthManager.swift */; };
+		89055C2A1E2BC4900095B300 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 89055C291E2BC4900095B300 /* Podfile */; };
+		896C52281E2BCA4A00D5F3AE /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 896C52271E2BCA4A00D5F3AE /* SDWebImage.framework */; };
+		896C522A1E2BCA4D00D5F3AE /* VK_ios_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 896C52291E2BCA4D00D5F3AE /* VK_ios_sdk.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8443CAE91E2BA18E001924D5 /* Messanger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messanger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8443CAEC1E2BA18E001924D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8443CAF11E2BA18E001924D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8443CAF41E2BA18E001924D5 /* Messanger.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Messanger.xcdatamodel; sourceTree = "<group>"; };
+		8443CAF61E2BA18E001924D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8443CAF91E2BA18E001924D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8443CAFB1E2BA18E001924D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8443CB051E2BA552001924D5 /* VKCoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKCoreDataManager.swift; sourceTree = "<group>"; };
+		8443CB0C1E2BAE1B001924D5 /* VKMCurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKMCurrentUser.swift; sourceTree = "<group>"; };
+		8443CB0E1E2BAF1B001924D5 /* VKMCurrentUserFabric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKMCurrentUserFabric.swift; sourceTree = "<group>"; };
+		8443CB111E2BB324001924D5 /* VKMDialogsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKMDialogsListViewController.swift; sourceTree = "<group>"; };
+		89055C271E2BC38F0095B300 /* ACAuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACAuthManager.swift; sourceTree = "<group>"; };
+		89055C291E2BC4900095B300 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		896C52271E2BCA4A00D5F3AE /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "../../../Library/Developer/Xcode/DerivedData/Messanger-fhacaxxfqnqhppfvkzywvofsbnqx/Build/Products/Debug-iphoneos/SDWebImage/SDWebImage.framework"; sourceTree = "<group>"; };
+		896C52291E2BCA4D00D5F3AE /* VK_ios_sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VK_ios_sdk.framework; path = "../../../Library/Developer/Xcode/DerivedData/Messanger-fhacaxxfqnqhppfvkzywvofsbnqx/Build/Products/Debug-iphoneos/VK-ios-sdk/VK_ios_sdk.framework"; sourceTree = "<group>"; };
+		D583274432D08DD881406F45 /* Pods_Messanger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messanger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F615C9F1DD25532EBDBAB6FD /* Pods-Messanger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messanger.release.xcconfig"; path = "Pods/Target Support Files/Pods-Messanger/Pods-Messanger.release.xcconfig"; sourceTree = "<group>"; };
+		F8B72C84D9722EA55F46DFE4 /* Pods-Messanger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messanger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Messanger/Pods-Messanger.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8443CAE61E2BA18E001924D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				896C522A1E2BCA4D00D5F3AE /* VK_ios_sdk.framework in Frameworks */,
+				896C52281E2BCA4A00D5F3AE /* SDWebImage.framework in Frameworks */,
+				5BA85D4C48B1B6E077DA72CC /* Pods_Messanger.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8443CAE01E2BA18E001924D5 = {
+			isa = PBXGroup;
+			children = (
+				89055C291E2BC4900095B300 /* Podfile */,
+				8443CAEB1E2BA18E001924D5 /* Messanger */,
+				8443CAEA1E2BA18E001924D5 /* Products */,
+				AA1CE8D9E650159DD5325732 /* Pods */,
+				9CFCF0DC22CB8C561886CB43 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8443CAEA1E2BA18E001924D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8443CAE91E2BA18E001924D5 /* Messanger.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8443CAEB1E2BA18E001924D5 /* Messanger */ = {
+			isa = PBXGroup;
+			children = (
+				8443CB101E2BB2F7001924D5 /* view controllers */,
+				8443CB041E2BA515001924D5 /* data model */,
+				8443CB021E2BA4E1001924D5 /* system */,
+				8443CB011E2BA4D7001924D5 /* managers */,
+			);
+			path = Messanger;
+			sourceTree = "<group>";
+		};
+		8443CB011E2BA4D7001924D5 /* managers */ = {
+			isa = PBXGroup;
+			children = (
+				89055C271E2BC38F0095B300 /* ACAuthManager.swift */,
+				8443CB051E2BA552001924D5 /* VKCoreDataManager.swift */,
+			);
+			name = managers;
+			sourceTree = "<group>";
+		};
+		8443CB021E2BA4E1001924D5 /* system */ = {
+			isa = PBXGroup;
+			children = (
+				8443CAF01E2BA18E001924D5 /* Main.storyboard */,
+				8443CAF61E2BA18E001924D5 /* Assets.xcassets */,
+				8443CAF81E2BA18E001924D5 /* LaunchScreen.storyboard */,
+				8443CAFB1E2BA18E001924D5 /* Info.plist */,
+				8443CAEC1E2BA18E001924D5 /* AppDelegate.swift */,
+			);
+			name = system;
+			sourceTree = "<group>";
+		};
+		8443CB041E2BA515001924D5 /* data model */ = {
+			isa = PBXGroup;
+			children = (
+				8443CB0B1E2BAE03001924D5 /* current user */,
+				8443CAF31E2BA18E001924D5 /* Messanger.xcdatamodeld */,
+			);
+			name = "data model";
+			sourceTree = "<group>";
+		};
+		8443CB0B1E2BAE03001924D5 /* current user */ = {
+			isa = PBXGroup;
+			children = (
+				8443CB0C1E2BAE1B001924D5 /* VKMCurrentUser.swift */,
+				8443CB0E1E2BAF1B001924D5 /* VKMCurrentUserFabric.swift */,
+			);
+			name = "current user";
+			sourceTree = "<group>";
+		};
+		8443CB101E2BB2F7001924D5 /* view controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8443CB111E2BB324001924D5 /* VKMDialogsListViewController.swift */,
+			);
+			name = "view controllers";
+			sourceTree = "<group>";
+		};
+		9CFCF0DC22CB8C561886CB43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				896C52291E2BCA4D00D5F3AE /* VK_ios_sdk.framework */,
+				896C52271E2BCA4A00D5F3AE /* SDWebImage.framework */,
+				D583274432D08DD881406F45 /* Pods_Messanger.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA1CE8D9E650159DD5325732 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8B72C84D9722EA55F46DFE4 /* Pods-Messanger.debug.xcconfig */,
+				F615C9F1DD25532EBDBAB6FD /* Pods-Messanger.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8443CAE81E2BA18E001924D5 /* Messanger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8443CAFE1E2BA18E001924D5 /* Build configuration list for PBXNativeTarget "Messanger" */;
+			buildPhases = (
+				A1DE9A2F31004A1853F6FEC0 /* [CP] Check Pods Manifest.lock */,
+				8443CAE51E2BA18E001924D5 /* Sources */,
+				8443CAE61E2BA18E001924D5 /* Frameworks */,
+				8443CAE71E2BA18E001924D5 /* Resources */,
+				108F0DE019E0B7B66F43B3FA /* [CP] Embed Pods Frameworks */,
+				5E923D3D8F450AB195C6C062 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Messanger;
+			productName = Messanger;
+			productReference = 8443CAE91E2BA18E001924D5 /* Messanger.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8443CAE11E2BA18E001924D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Admin;
+				TargetAttributes = {
+					8443CAE81E2BA18E001924D5 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = GB857ZG62U;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 8443CAE41E2BA18E001924D5 /* Build configuration list for PBXProject "Messanger" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8443CAE01E2BA18E001924D5;
+			productRefGroup = 8443CAEA1E2BA18E001924D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8443CAE81E2BA18E001924D5 /* Messanger */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8443CAE71E2BA18E001924D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8443CAFA1E2BA18E001924D5 /* LaunchScreen.storyboard in Resources */,
+				8443CAF71E2BA18E001924D5 /* Assets.xcassets in Resources */,
+				89055C2A1E2BC4900095B300 /* Podfile in Resources */,
+				8443CAF21E2BA18E001924D5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		108F0DE019E0B7B66F43B3FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Messanger/Pods-Messanger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E923D3D8F450AB195C6C062 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Messanger/Pods-Messanger-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1DE9A2F31004A1853F6FEC0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8443CAE51E2BA18E001924D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8443CAF51E2BA18E001924D5 /* Messanger.xcdatamodeld in Sources */,
+				89055C281E2BC38F0095B300 /* ACAuthManager.swift in Sources */,
+				8443CB061E2BA552001924D5 /* VKCoreDataManager.swift in Sources */,
+				8443CAED1E2BA18E001924D5 /* AppDelegate.swift in Sources */,
+				8443CB0F1E2BAF1B001924D5 /* VKMCurrentUserFabric.swift in Sources */,
+				8443CB0D1E2BAE1B001924D5 /* VKMCurrentUser.swift in Sources */,
+				8443CB121E2BB324001924D5 /* VKMDialogsListViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8443CAF01E2BA18E001924D5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8443CAF11E2BA18E001924D5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8443CAF81E2BA18E001924D5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8443CAF91E2BA18E001924D5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8443CAFC1E2BA18E001924D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8443CAFD1E2BA18E001924D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8443CAFF1E2BA18E001924D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8B72C84D9722EA55F46DFE4 /* Pods-Messanger.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GB857ZG62U;
+				INFOPLIST_FILE = Messanger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "vvz.vk-news";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8443CB001E2BA18E001924D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F615C9F1DD25532EBDBAB6FD /* Pods-Messanger.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GB857ZG62U;
+				INFOPLIST_FILE = Messanger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "vvz.vk-news";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8443CAE41E2BA18E001924D5 /* Build configuration list for PBXProject "Messanger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8443CAFC1E2BA18E001924D5 /* Debug */,
+				8443CAFD1E2BA18E001924D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8443CAFE1E2BA18E001924D5 /* Build configuration list for PBXNativeTarget "Messanger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8443CAFF1E2BA18E001924D5 /* Debug */,
+				8443CB001E2BA18E001924D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8443CAF31E2BA18E001924D5 /* Messanger.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8443CAF41E2BA18E001924D5 /* Messanger.xcdatamodel */,
+			);
+			currentVersion = 8443CAF41E2BA18E001924D5 /* Messanger.xcdatamodel */;
+			path = Messanger.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8443CAE11E2BA18E001924D5 /* Project object */;
+}
