@@ -12,9 +12,6 @@ class VKMDialogsListViewController: UIViewController
 {
     override func viewDidLoad()
     {
-       let user = VKMCurrentUserFabric.currentUserInMainContext()
-        
-        print(user)
         
         super.viewDidLoad()
 

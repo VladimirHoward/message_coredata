@@ -1,30 +1,122 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LRP-B8-7Ri">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Dialogs List View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Друзья-->
+        <scene sceneID="M6M-Pc-5gm">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="VKMDialogsListViewController" customModule="Messanger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oXh-9a-hcf" customClass="VKMFriendsListViewController" customModule="Messanger" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="sa5-wH-gse"/>
+                        <viewControllerLayoutGuide type="bottom" id="j5t-fK-Twq"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="7Qp-CF-b0g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TB3-kS-rHW">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="66" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="TB3-kS-rHW" secondAttribute="trailing" constant="-16" id="EaI-mv-2u5"/>
+                            <constraint firstItem="j5t-fK-Twq" firstAttribute="top" secondItem="TB3-kS-rHW" secondAttribute="bottom" id="HhU-Df-vTh"/>
+                            <constraint firstItem="TB3-kS-rHW" firstAttribute="leading" secondItem="7Qp-CF-b0g" secondAttribute="leadingMargin" constant="-16" id="JLS-UF-N4G"/>
+                            <constraint firstItem="TB3-kS-rHW" firstAttribute="top" secondItem="sa5-wH-gse" secondAttribute="bottom" id="xr7-Mk-Wid"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Друзья" id="8G0-Ub-eXn"/>
+                    <connections>
+                        <outlet property="tableView" destination="TB3-kS-rHW" id="Dcl-3t-EY0"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wdz-2f-Ntu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1288.8" y="249.62518740629687"/>
+        </scene>
+        <!--Диалоги-->
+        <scene sceneID="kHl-Id-PFw">
+            <objects>
+                <viewController id="Bj4-JR-AJe" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5wv-LW-ZCx"/>
+                        <viewControllerLayoutGuide type="bottom" id="BkX-yr-aJJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aSp-kD-71D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Диалоги" id="tHq-n2-4yP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zlj-NW-abo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1290" y="-406"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="UMZ-mj-DBw">
+            <objects>
+                <viewController storyboardIdentifier="kLoginScreenIdentifier" id="LRP-B8-7Ri" customClass="VKMLoginViewController" customModule="Messanger" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BHP-Pd-6Qa"/>
+                        <viewControllerLayoutGuide type="bottom" id="NPC-xn-TuU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tWC-0u-ba7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messenger" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1K-yG-mEN">
+                                <rect key="frame" x="140" y="323" width="95" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="NqG-Ia-irc"/>
+                                    <constraint firstAttribute="width" constant="95" id="lA9-RU-13K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H1K-yG-mEN" firstAttribute="centerY" secondItem="tWC-0u-ba7" secondAttribute="centerY" id="8sg-c5-0XH"/>
+                            <constraint firstItem="H1K-yG-mEN" firstAttribute="centerX" secondItem="tWC-0u-ba7" secondAttribute="centerX" id="uRs-dO-KL3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="Bt0-Q4-zaF" kind="modal" identifier="kLoginTabbarSegueIdentifier" modalTransitionStyle="flipHorizontal" id="VgT-sT-Zja"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g6Z-Ke-RJH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-431.19999999999999" y="-79.610194902548727"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="w5f-nG-COH">
+            <objects>
+                <tabBarController storyboardIdentifier="kTabbarScreenIdentifier" id="Bt0-Q4-zaF" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="jjW-pI-JFi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Bj4-JR-AJe" kind="relationship" relationship="viewControllers" id="ELM-h7-wOg"/>
+                        <segue destination="oXh-9a-hcf" kind="relationship" relationship="viewControllers" id="bNf-1E-kyr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zIf-Ap-skD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="339" y="-78"/>
         </scene>
     </scenes>
 </document>

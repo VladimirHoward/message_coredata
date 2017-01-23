@@ -17,7 +17,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
     {
-       
+        let shouldLogin = ACAuthManager.sharedInstance.shouldLogen()
+        var initialVCID = ""
+        
+        if ( shouldLogin )
+        {
+            initialVCID = ACConts.UIConst.kLoginScreenIdentifier
+        }
+        else
+        {
+            initialVCID = ACConts.UIConst.kTabbarScreenIdentifier
+        }
+        
+        let initialVC = ACViewConterollerFabric.getViewController(withIdentifier: initialVCID)
+        
+        self.window?.rootViewController = initialVC
+        
         return true
     }
     
@@ -26,7 +41,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         VKMCoreDataManager.sharedInstsnce.save()
     }
 
-   
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        return ACAuthManager.sharedInstance.processOpenURL(url: url, fromApplication: sourceApplication)
+    }
     
 }
 

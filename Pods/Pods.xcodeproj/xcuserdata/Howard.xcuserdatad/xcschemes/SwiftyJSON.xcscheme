@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'EA7FA780F01417B03CE4543B75595333'
-               BlueprintName = 'VK-ios-sdk-VKSdkResources'
+               BlueprintIdentifier = '53ACD042CDA04A4C0D27A8D258CC1DE3'
+               BlueprintName = 'SwiftyJSON'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'VKSdkResources.bundle'>
+               BuildableName = 'SwiftyJSON.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

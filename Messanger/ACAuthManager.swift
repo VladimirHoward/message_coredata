@@ -33,13 +33,14 @@ extension ACAuthManager
 //MARK: - логин и авторизация - открытый интерфейс
 extension ACAuthManager
 {
+    func shouldLogen() -> Bool
+    {
+        return getAccessToken() == ""
+    }
+    
     func login ( withUnderlayController controller : UIViewController , success : @escaping () -> Void , failure : @escaping () -> Void )
     {
-        if ( getAccessToken() != "" )
-        {
-            success()
-            return
-        }
+        
         
         self.controller = controller
         self.successBlock = success
@@ -65,7 +66,7 @@ extension ACAuthManager : VKSdkDelegate , VKSdkUIDelegate
     {
         if let accessToken = result.token
         {
-            setAccessToken ( token: accessToken.accessToken )
+            setAccessToken ( token: accessToken.accessToken, userID: (accessToken.userId as NSString).longLongValue )
             self.successBlock?()
         }
         else
@@ -84,10 +85,10 @@ extension ACAuthManager : VKSdkDelegate , VKSdkUIDelegate
         self.controller?.present(controller, animated: true, completion: nil)
     }
     
-    private func setAccessToken ( token : String )
+    private func setAccessToken ( token : String, userID: Int64 )
     {
-        UserDefaults.standard.set(token, forKey: "X-Access-Token")
-        UserDefaults.standard.synchronize()
+        _ = VKMCurrentUserFabric.createOrUpdateModel(withID: userID, access_token: token, context: VKMCoreDataManager.sharedInstsnce.managedObjectContext)
+        VKMCoreDataManager.sharedInstsnce.save()
     }
 }
 
@@ -96,11 +97,13 @@ extension ACAuthManager
 {
     func getAccessToken () -> String
     {
-        if let token = UserDefaults.standard.object(forKey: "X-Access-Token")
+        if let user = VKMCurrentUserFabric.currentUserInMainContext()
         {
-            return token as! String
+            return user.access_token
         }
-        
-        return ""
+        else
+        {
+            return ""
+        }
     }
 }

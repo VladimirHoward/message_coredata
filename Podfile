@@ -5,5 +5,6 @@ target 'Messanger' do
 
 pod 'VK-ios-sdk'
 pod 'SDWebImage'
+pod 'SwiftyJSON'
 
 end
