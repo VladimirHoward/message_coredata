@@ -19,6 +19,11 @@ class VKMDependencyInjector
             presenter = VKMFriendsListPresenter()
         }
         
+        if (view is VKMDialogsListViewController)
+        {
+            presenter = VKMDialogsListPresenter()
+        }
+        
         if presenter != nil
         {
             view.assignPresenter(presenter: presenter!)

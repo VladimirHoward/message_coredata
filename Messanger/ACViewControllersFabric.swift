@@ -1,5 +1,5 @@
 //
-//  ACViewControllersFabric.swift
+//  ACViewControllerFabric.swift
 //  Messanger
 //
 //  Created by Gregory House on 22.01.17.
@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ACViewConterollerFabric
+class ACViewControllerFabric
 {
     class func getViewController (withIdentifier identifier: String) -> UIViewController
     {

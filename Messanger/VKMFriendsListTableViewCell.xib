@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,8 +21,8 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FC7-6f-WFj">
                         <rect key="frame" x="8" y="4" width="50" height="50"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="50" id="Wuq-cR-EMW"/>
-                            <constraint firstAttribute="width" constant="50" id="hBd-i0-fgG"/>
+                            <constraint firstAttribute="width" constant="50" id="U6p-eK-STP"/>
+                            <constraint firstAttribute="height" constant="50" id="xqv-D8-95H"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -30,50 +30,33 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b42-sr-Zak">
-                        <rect key="frame" x="66" y="19" width="108" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="108" id="Fbk-84-bMW"/>
-                            <constraint firstAttribute="height" constant="21" id="zLT-OD-o42"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b42-sr-Zak">
+                        <rect key="frame" x="66" y="19" width="226" height="21"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K3D-fb-VZq">
-                        <rect key="frame" x="202" y="21" width="15" height="16"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="6"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2Q-Cx-8ot">
-                        <rect key="frame" x="300" y="24" width="12" height="12"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f2Q-Cx-8ot">
+                        <rect key="frame" x="300" y="26" width="10" height="10"/>
+                        <color key="backgroundColor" red="0.72510284185409546" green="0.76271969079971313" blue="0.9385492205619812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="12" id="5KB-je-M6h"/>
-                            <constraint firstAttribute="width" constant="12" id="A1a-9P-1U1"/>
+                            <constraint firstAttribute="width" constant="10" id="Cw3-G9-ISw"/>
+                            <constraint firstAttribute="height" constant="10" id="JQi-Ps-eVd"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="6"/>
+                                <integer key="value" value="5"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="b42-sr-Zak" firstAttribute="leading" secondItem="FC7-6f-WFj" secondAttribute="trailing" constant="8" id="RzD-3I-lqs"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="FC7-6f-WFj" secondAttribute="bottom" constant="-2.5" id="Z7k-aq-jZ1"/>
-                    <constraint firstAttribute="leadingMargin" secondItem="FC7-6f-WFj" secondAttribute="leading" id="nhC-fu-sMc"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="f2Q-Cx-8ot" secondAttribute="trailing" id="p9q-1O-9fU"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="f2Q-Cx-8ot" secondAttribute="bottom" constant="16" id="sTy-ml-kkI"/>
-                    <constraint firstItem="f2Q-Cx-8ot" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="16" id="vvZ-LT-Od7"/>
-                    <constraint firstItem="FC7-6f-WFj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-4" id="wUA-bC-Opa"/>
-                    <constraint firstItem="f2Q-Cx-8ot" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="292" id="yrL-K6-ccR"/>
-                    <constraint firstItem="b42-sr-Zak" firstAttribute="centerY" secondItem="FC7-6f-WFj" secondAttribute="centerY" id="zOI-Ge-aHx"/>
+                    <constraint firstItem="b42-sr-Zak" firstAttribute="leading" secondItem="FC7-6f-WFj" secondAttribute="trailing" constant="8" id="Tv9-6e-ReO"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="FC7-6f-WFj" secondAttribute="leading" id="Xzk-EB-fJs"/>
+                    <constraint firstItem="b42-sr-Zak" firstAttribute="centerY" secondItem="FC7-6f-WFj" secondAttribute="centerY" id="dKJ-u4-i35"/>
+                    <constraint firstItem="FC7-6f-WFj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ki5-5d-8uJ"/>
+                    <constraint firstItem="f2Q-Cx-8ot" firstAttribute="centerY" secondItem="b42-sr-Zak" secondAttribute="centerY" constant="1.5" id="sOZ-hF-lRg"/>
+                    <constraint firstItem="f2Q-Cx-8ot" firstAttribute="leading" secondItem="b42-sr-Zak" secondAttribute="trailing" constant="8" id="zag-4X-DWj"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

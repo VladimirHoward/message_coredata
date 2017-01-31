@@ -21,16 +21,10 @@ class API_WRAPPER
         {
             let key = keysArray[i]
             let value = parametrs[key] as! String
-            
-            if (i < keysArray.count - 1)
-            {
-                requestString += "\(key)=\(value)&"
-            }
-            else
-            {
-                requestString += "\(key)=\(value)"
-            }
+            requestString += "\(key)=\(value)&"
         }
+        requestString += "v=5.62"
+
         
 //        print("\n\n\n строка запроса - \(requestString)\n\n\n")
         
@@ -44,7 +38,7 @@ class API_WRAPPER
 
 
 
-//MARK получение списка диалогов
+//MARK получение списка друзей
 extension API_WRAPPER
 {
     class func getFriends (withCount count: Int, offset: Int, successBlock: @escaping (_ jsonResponce: JSON) -> Void, failureBlock: @escaping (_ errorCode: Int) -> Void) -> URLSessionDataTask
@@ -73,6 +67,30 @@ extension API_WRAPPER
 }
 
 
+//MARK получение списка диалогов
+extension API_WRAPPER
+{
+    class func getDialogs (withCount count: Int, offset: Int, successBlock: @escaping (_ jsonResponce: JSON) -> Void, failureBlock: @escaping (_ errorCode: Int) -> Void) -> URLSessionDataTask
+    {
+        let argsDictionary = NSMutableDictionary ()
+        
+        argsDictionary.setObject("\(count)", forKey: ACConts.URLConst.Arguments.kCount)
+        argsDictionary.setObject("\(offset)", forKey: ACConts.URLConst.Arguments.kOffset)
+        argsDictionary.setObject(VKMCurrentUserFabric.currentUserInMainContext()!.access_token, forKey: ACConts.URLConst.Arguments.kAccessToken)
+        
+        let request = composeGenericHTTPGetRequest(forBaseURL: ACConts.URLConst.kBaseURL, andMethod: ACConts.URLConst.Scripts.kDialogsGet, withParametrs: argsDictionary)
+        
+        print("\(request)")
+        
+        let task = URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) in
+            genericCompletetionCallback(withResponseData: data, response: response, error: error, successBlock: successBlock, failureBlock: failureBlock)
+        }
+        task.resume()
+        return task
+    }
+}
+
+
 //MARK: общий обработчик ответов для JSON
 extension API_WRAPPER
 {
@@ -89,7 +107,7 @@ extension API_WRAPPER
             {
                 let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
                 let swiftyJSON = JSON(json)
-                print(swiftyJSON)
+//                print(swiftyJSON)
                 successBlock(swiftyJSON)
             }
             catch

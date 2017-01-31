@@ -10,7 +10,7 @@ import Foundation
 
 class VKMFriendsManager
 {
-    class func getFriends (count: Int, offset: Int, success: @escaping (NSArray) -> Void, failure: @escaping (Int) -> Void)
+    class func getFriends (count: Int, offset: Int, success: @escaping (NSArray, Int) -> Void, failure: @escaping (Int) -> Void)
     {
         let operation = VKMFriendsGetOperations(withCount: count, offset: offset, success: success, failure: failure)
         VKMOperationsManagers.addBusinessLogicOperation(op: operation, cancellingQueue: true)

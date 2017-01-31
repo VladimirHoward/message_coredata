@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             initialVCID = ACConts.UIConst.kTabbarScreenIdentifier
         }
         
-        let initialVC = ACViewConterollerFabric.getViewController(withIdentifier: initialVCID)
+        let initialVC = ACViewControllerFabric.getViewController(withIdentifier: initialVCID)
         
         self.window?.rootViewController = initialVC
         

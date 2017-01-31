@@ -12,12 +12,12 @@ class VKMFriendsGetOperations: Operation
 {
     var offset: Int
     var count: Int
-    var success: (NSArray) -> Void
+    var success: (NSArray, Int) -> Void
     var failure: (Int) -> Void
     
     var internetTask: URLSessionDataTask?
     
-    init(withCount count: Int, offset: Int, success: @escaping (NSArray) -> Void, failure: @escaping (Int) -> Void)
+    init(withCount count: Int, offset: Int, success: @escaping (NSArray, Int) -> Void, failure: @escaping (Int) -> Void)
     {
         self.offset = offset
         self.count = count
@@ -36,7 +36,8 @@ class VKMFriendsGetOperations: Operation
             
             let outArray = NSMutableArray ()
             
-            let friends = jsonResponse["response"].arrayValue
+            let friends = jsonResponse["response"]["items"].arrayValue
+            let totalCount = jsonResponse["response"]["count"].intValue
             
             for friend in friends
             {
@@ -52,11 +53,11 @@ class VKMFriendsGetOperations: Operation
             
             if (self.isCancelled != nil)
             {
-                self.success(outArray)
+                self.success(outArray, totalCount)
             }
             else
             {
-                self.success(NSArray())
+                self.success(NSArray(), totalCount)
             }
             semaphore.signal()
 

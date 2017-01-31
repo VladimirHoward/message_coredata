@@ -24,6 +24,7 @@ class ACConts
         class Scripts
         {
             static let kFriendsGet = "friends.get"
+            static let kDialogsGet = "messages.getDialogs"
         }
         
         class Arguments

@@ -16,7 +16,7 @@ class VKMFriendsListTableViewCell: UITableViewCell {
     @IBOutlet weak var onlineDot: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     
-    func congigureSelg (withDataModel model: VKMFriend)
+    func configureSelf (withDataModel model: VKMFriend)
     {
         
         avatarIV.sd_setImage(with: URL(string: model.avatarURL)!)

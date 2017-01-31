@@ -13,6 +13,7 @@ protocol BasePresenter
 
     func assignView( view: BaseView) -> Void
     func viewLoaded() -> Void
+    func refreshData() -> Void
     func getModel (atIndexPath indexPath: NSIndexPath) -> Any
     func getModelsCount () -> Int
     func loadModels (withOffset offset: Int, count: Int) -> Void

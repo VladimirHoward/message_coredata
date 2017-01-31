@@ -19,8 +19,6 @@ class VKMFriendsListViewController: UIViewController
     @IBOutlet weak var tableView: UITableView!
     var presenter: BasePresenter?
     
-    
-    
     override func viewWillAppear(_ animated: Bool)
     {
         tableView.register(kUserListCellNib, forCellReuseIdentifier: kUserListReuseIdentifier)
@@ -32,8 +30,11 @@ class VKMFriendsListViewController: UIViewController
         {
             VKMDependencyInjector.assignPresenter(forView: self)
         }
+        else
+        {
+            presenter?.refreshData()
+        }
     }
-    
 }
 
 //MARK: процедуры BaseView
@@ -60,7 +61,7 @@ extension VKMFriendsListViewController: UITableViewDataSource, UITableViewDelega
     {
         let model = presenter!.getModel(atIndexPath: indexPath as NSIndexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: kUserListReuseIdentifier, for: indexPath) as! VKMFriendsListTableViewCell
-        cell.congigureSelg(withDataModel: model as! VKMFriend)
+        cell.configureSelf(withDataModel: model as! VKMFriend)
         return UITableViewCell()
     }
     
